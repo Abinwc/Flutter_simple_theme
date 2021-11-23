@@ -12,24 +12,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
-				light: ThemeData(
-						brightness: Brightness.light,
-						primarySwatch: Colors.red,
-						accentColor: Colors.amber,
-				),	
-				dark: ThemeData(
-						brightness: Brightness.dark,
-						primarySwatch: Colors.red,
-						accentColor: Colors.amber,
-				),
-				initial: AdaptiveThemeMode.dark,
-				builder: (theme, darkTheme) => MaterialApp(
-      title: 'Theme Demo',
-      theme: theme,
-			darkTheme: darkTheme,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    )
-		);
+        light: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.red,
+          accentColor: Colors.amber,
+        ),
+        dark: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: Colors.red,
+          accentColor: Colors.amber,
+        ),
+        initial: AdaptiveThemeMode.dark,
+        builder: (theme, darkTheme) => MaterialApp(
+              title: 'Theme Demo',
+              theme: theme,
+              darkTheme: darkTheme,
+              home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            ));
   }
 }
 
@@ -56,8 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-       AdaptiveTheme.of(context).toggleThemeMode();
-			// This call to setState tells the Flutter framework that something has
+      AdaptiveTheme.of(context).toggleThemeMode();
+      // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
